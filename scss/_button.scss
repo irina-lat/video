@@ -19,14 +19,17 @@
             border-radius: 1rem;
     }
 }
+
 @media (max-width: 48em) {
-&__button {
-    font-size: 2.4rem;
-    &-border {
-        padding: 3.8rem 0.8rem 2.7rem 0.8rem;
-    }
-    &-outline {
-        padding: 3.5rem 1.2rem;
-    }
+    .button {
+        &__button {
+        font-size: 2.4rem;
+        }
+        &-border {
+            padding: 3.8rem 0.8rem 2.7rem 0.8rem;
+        }
+        &-outline {
+            padding: 3.5rem 1.2rem;
+        }
     }
 }

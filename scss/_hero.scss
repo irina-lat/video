@@ -6,7 +6,6 @@
         padding-top: 19rem;
         padding-bottom: 17.3rem;
     }
-    // !важно
     &__bg {
         position: absolute;
         z-index: -1;
@@ -29,7 +28,7 @@
         @include font(400, 1.6rem, 150%);
         color: #5c5c5c;
         }
-}
+
     &__pagination {
         .swiper-pagination-bullet {
             width: 2.2rem;
@@ -52,7 +51,7 @@
         left: 50%;
         transform: translate(-50%, 0);
     }
-
+}
     @media (max-width: 48em) {
     .hero {
         &__bg {

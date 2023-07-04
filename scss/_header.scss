@@ -9,6 +9,7 @@
     .container {
         padding-top: 3.2rem;
         @include even;
+        align-items: flex-start;
     }
     &__logo {
         width: 18.1rem;
@@ -55,19 +56,21 @@
         display: block;
         @include font(700, 1.8rem, 133%);
         color: #cc3333;
-        margin-bottom: 0.7rem;
+        
         &-two {
             display: none;
+            margin-top: 0.7rem;
         }
     }
     &__telephone {
         display: flex;
-        align-items: center;
+        align-items: start;
     }
     &__arrow {
         width: 1rem;
         height: 1rem;
         cursor: pointer;
+        margin-top: 1rem;
         &-two {
             transform: rotate(180deg);
             display: none;
