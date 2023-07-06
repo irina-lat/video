@@ -522,6 +522,15 @@ input[type=number] {
   width: 46.2rem;
   right: 0;
 }
+.title__border-install::after {
+  content: "";
+  height: 0.5rem;
+  background-color: #DA3939;
+  position: absolute;
+  bottom: 0;
+  width: 64.5rem;
+  left: 0;
+}
 .title--left {
   max-width: 77.5%;
   text-align: left;
@@ -542,6 +551,10 @@ input[type=number] {
   .title__border-mounting::after {
     width: 42.2rem;
     right: 7rem;
+  }
+  .title__border-install::after {
+    width: 32rem;
+    left: 12rem;
   }
   .title--left {
     max-width: 100%;
@@ -662,5 +675,125 @@ input[type=number] {
   }
   .garant .title--left {
     margin-bottom: 4rem;
+  }
+}
+.install {
+  padding-top: 7.2rem;
+  padding-bottom: 8.5rem;
+}
+.install__items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+.install__item {
+  position: relative;
+  width: 26.9rem;
+}
+.install__item img {
+  border-radius: 1rem;
+  width: 100%;
+  height: 100%;
+}
+.install__item::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  background: #000;
+  border-radius: 1rem;
+  opacity: 0.55;
+}
+.install__text {
+  position: absolute;
+  bottom: 1.8rem;
+  left: 2rem;
+  z-index: 10;
+  color: #fff;
+}
+.install__header {
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 133%;
+}
+.install__link {
+  margin-top: 2rem;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 133%;
+  display: none;
+}
+
+@media (min-width: 48em) {
+  .install__item:hover::before {
+    content: "";
+    width: 108%;
+    height: 108%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    border: 0.1rem solid rgba(207, 53, 53, 0.25);
+    border-radius: 1.3rem;
+  }
+  .install__item:hover::after {
+    background: #CF3535;
+  }
+  .install__item:hover .install__text {
+    width: 96%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .install__item:hover .install__link {
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: -2rem;
+    transform: translate(-50%, 0);
+  }
+  .install__item:hover .install__link::after {
+    content: "";
+    display: block;
+    width: 0.1rem;
+    height: 2.4rem;
+    background-color: #fff;
+    position: absolute;
+    bottom: -3.8rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}
+@media (max-width: 48em) {
+  .install__items {
+    margin-top: 4rem;
+  }
+  .install__item {
+    width: 100%;
+  }
+  .install__text {
+    width: 35rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .install__header {
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 133%;
+    text-align: center;
+  }
+  .install__link {
+    font-weight: 400;
+    font-size: 2.6rem;
+    line-height: 133%;
+    display: block;
   }
 }
