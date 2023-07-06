@@ -554,6 +554,15 @@ input[type=number] {
   width: 67.3rem;
   right: 0;
 }
+.title__border-brands::after {
+  content: "";
+  height: 0.5rem;
+  background-color: #DA3939;
+  position: absolute;
+  bottom: 0;
+  width: 43.6rem;
+  right: 0;
+}
 .title--left {
   max-width: 77.5%;
   text-align: left;
@@ -586,6 +595,10 @@ input[type=number] {
   .title__border-why::after {
     width: 22.5rem;
     left: 17rem;
+  }
+  .title__border-brands::after {
+    width: 31rem;
+    right: 0;
   }
   .title--left {
     max-width: 100%;
@@ -1040,5 +1053,60 @@ input[type=number] {
   }
   .why__subheader {
     font-size: 2.6rem;
+  }
+}
+.brands {
+  position: relative;
+  padding-bottom: 6rem;
+}
+.brands__slider {
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+}
+.brands__slide {
+  padding: 3rem 6rem;
+}
+.brands__slide img {
+  display: block;
+  width: 12.5rem;
+  height: 5.7rem;
+}
+.brands__slide::before {
+  content: "";
+  position: absolute;
+  width: 4.5rem;
+  height: 4.5rem;
+  flex-shrink: 0;
+  background: url(../img/mounting/angle.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  left: 0;
+  top: -0.25rem;
+}
+.brands__slide::after {
+  content: "";
+  position: absolute;
+  width: 4.5rem;
+  height: 4.5rem;
+  flex-shrink: 0;
+  background: url(../img/mounting/angle.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: rotate(180deg);
+  right: 0;
+  bottom: -0.45rem;
+}
+
+@media (max-width: 48em) {
+  .brands .slider__arrow {
+    display: none;
+  }
+  .brands__slide::before {
+    width: 7rem;
+    height: 7rem;
+  }
+  .brands__slide::after {
+    width: 7rem;
+    height: 7rem;
   }
 }

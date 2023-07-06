@@ -1,0 +1,45 @@
+.brands {
+    position: relative;
+    padding-bottom: 6rem;
+    &__slider {
+        padding-bottom: 2rem;
+        padding-top: 1rem;
+    }
+    &__slide {
+        padding: 3rem 6rem;
+        img {
+            display: block;
+            width: 12.5rem;
+            height: 5.7rem;
+        }
+        &::before {
+            @include borderAngle(4.5rem, 4.5rem);
+            left: 0;
+            top: -.25rem;
+        }
+        &::after {
+            @include borderAngle(4.5rem, 4.5rem);
+            transform: rotate(180deg);
+            right: 0;
+            bottom: -.45rem;
+        }
+    }
+}
+
+@media (max-width: 48em) {
+    .brands {
+        .slider__arrow {
+            display: none;
+        }
+        &__slide {
+            &::before {
+                width: 7rem;
+                height: 7rem;
+            }
+            &::after {
+                width: 7rem;
+                height: 7rem;
+            }
+        }
+    }
+}

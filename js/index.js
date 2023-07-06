@@ -23,8 +23,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 // Swiper Hero
 
-    const swiper = new Swiper('.hero__slider', {
-        // direction: 'vertical',
+    const swiperHero = new Swiper('.hero__slider', {
         loop: true,
         spaceBetween: 30,
         effect: 'fade',
@@ -40,7 +39,24 @@ window.addEventListener('DOMContentLoaded', () => {
           nextEl: '.hero__arrow-next',
           prevEl: '.hero__arrow-prev',
         },
-      
-        
       });
+
+      const swiperBrands = new Swiper('.brands__slider', {
+        loop: true,
+        spaceBetween: 30,
+        breakpoints: {
+          320: {
+            slidesPerView: 2
+          },
+          769: {
+            slidesPerView: 4
+          }
+        },
+        navigation: {
+          nextEl: '.brands__arrow-next',
+          prevEl: '.brands__arrow-prev',
+        },
+      });
+
+
 });
