@@ -40,6 +40,10 @@
             @include borderBot(43.6rem);
             right: 0;
         }
+        &-video::after {
+            @include borderBot(45.6rem);
+            right: 0;
+        }
     }
     &--left {
         max-width: 77.5%;
