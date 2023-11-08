@@ -57,6 +57,28 @@ window.addEventListener('DOMContentLoaded', () => {
           prevEl: '.brands__arrow-prev',
         },
       });
-
-
 });
+
+if (document.querySelector('.preview__play')) {
+  const playVideo = document.querySelector('.preview__play');
+  const previewVideo = document.querySelector('.preview__img');
+  const videoText = document.querySelector('.video__text');
+  const videoBg = document.querySelector('.video__bg');
+  const videoWrap = document.querySelector('.video__player');
+  const video = document.querySelector('.video__wrap iframe');
+
+  playVideo.addEventListener('click', () => {
+    playVideo.style.display = 'none';
+    previewVideo.style.display = 'none';
+    videoText.style.display = 'none';
+    video.style.display = 'block';
+    video.style.marginTop = '-50rem';
+    video.style.position = 'relative';
+    video.style.zIndex = '100';
+    videoBg.style.zIndex = '0';
+    videoWrap.style.minHeight = '50rem';
+  } )
+
+  //*! доработать на классы
+
+}

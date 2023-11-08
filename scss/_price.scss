@@ -1,0 +1,74 @@
+.price {
+    position: relative;
+    padding-top: 7.2rem;
+    padding-bottom: 11.2rem;
+    background: linear-gradient(180deg, #F4F4F4 0%, #E9E9E9 100%);
+    // &__bg {
+    //     position: absolute;
+    //     top: 50%;
+    //     right: 0;
+    //     transform: translate(0, -50%);
+    // }
+    &__cards {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 2.7rem;
+    }
+    &__card {
+        position: relative;
+        width: 26.8rem;
+        @include centered;
+        flex-direction: column;
+        padding-bottom: .7rem;
+        text-align: center;
+    }
+    &__name {
+        width: 100%;
+        @include font(700, 1.8rem, 133%);
+        padding-top: 1.7rem;
+        padding-bottom: 1.7rem;
+        box-shadow: 0 .4rem 1.2rem rgba(0, 0, 0, 0.09);
+        border-radius:  1rem 1rem 1rem 0;
+        &::before {
+            @include borderAngle(5.7rem, 5.8rem);
+            left: -0.9rem;
+            top: -1.4rem;
+        }
+        &::after {
+            @include borderAngle(5.7rem, 5.8rem);
+            right: -.9rem;
+            top: 1.4rem;
+            transform: rotate(180deg);
+        }
+    }
+    &__description {
+        padding: 1.7rem 2.5rem;
+    }
+    &__coin {
+        margin-bottom: 1.4rem;
+        @include font(700, 2.4rem, 133%);
+        color: #CF3535;
+        span {
+            font-size: 3.6rem;
+        }
+    }
+    &__mounting {
+        margin-bottom: 1rem;
+        @include font(600, 1.8rem, 150%);
+        color: #5c5c5c;
+    }
+    &__img {
+        width: 25.3rem;
+        height: 18.2rem;
+        margin: 0 auto 2.6rem auto;
+        padding-bottom: 1rem;
+    }
+    &__title {
+        margin-bottom: 1.4rem;
+        @include font(700, 1.8rem, 133%);
+    }
+    &__list {
+        margin-bottom: 2rem;
+        text-align: left;
+    }
+}       

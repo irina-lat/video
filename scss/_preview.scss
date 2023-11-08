@@ -55,3 +55,11 @@
         border-bottom: 1.35rem solid transparent;
     }
 }
+
+@media (max-width: 48em) {
+    .preview {
+        &__play {
+            transform: translate(50%, 10%);
+        }
+    }
+}
