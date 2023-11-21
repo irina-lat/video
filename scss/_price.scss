@@ -57,6 +57,9 @@
         @include font(600, 1.8rem, 150%);
         color: #5c5c5c;
     }
+    &__corr {
+        margin-bottom: 1rem;
+    }
     &__img {
         width: 25.3rem;
         height: 18.2rem;
@@ -71,4 +74,92 @@
         margin-bottom: 2rem;
         text-align: left;
     }
-}       
+    &__item {
+        position: relative;
+        padding-left: 2rem;
+        &:not(:last-child) {
+            margin-bottom: 0.5rem;
+        }
+        @include font(400, 1.8rem, 150%);
+        color: #5c5c5c;
+        &:before {
+            content: " ";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translate(0, -50%);
+            width: 1.2rem;
+            height: 1.2rem;
+            border-radius: 50%;
+            display: block;
+            background: url('../img/price/dot.svg') no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    }
+    & .button-outline, & .button-border, & .price-button {
+        width: 100%;
+    }
+    & .button-border, & .price-button {
+        padding: 1rem;
+    }
+    .button-outline {
+        padding: 1.2rem;
+    }
+}  
+
+@media (max-width: 48em) {
+    .price {
+        &__cards {
+            flex-direction: column;
+        }
+        &__card {
+            width: 100%;
+            &:not(:last-child) {
+                margin-bottom: 4rem;
+            }
+        }
+        &__name {
+            font-size: 3.6rem;
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+            &:after {
+                top: 6rem;
+            }
+        }
+        &__coin {
+            font-size: 3.8rem;
+            span {
+                font-size: 5rem;
+            }
+        }
+        &__mounting {
+            font-size: 3.6rem;
+        }
+        &__corr {
+            font-size: 2.8rem;
+        }
+        &__img {
+            width: 100%;
+            height: auto;
+        }
+        &__title {
+            font-size: 3.6rem;
+        }
+        &__item {
+            padding-left: 5rem;
+            font-size: 3.2rem;
+            &:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+            &:before {
+                width: 3rem;
+                height: 3rem;
+            } 
+        }
+        &__button {
+            font-size: 3.4rem;
+            padding: 3rem 4rem;
+        }
+    }
+}
