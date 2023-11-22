@@ -590,6 +590,15 @@ input[type=number] {
   width: 22.8rem;
   right: 0;
 }
+.title__border-reviews::after {
+  content: "";
+  height: 0.5rem;
+  background-color: #DA3939;
+  position: absolute;
+  bottom: 0;
+  width: 13.7rem;
+  left: 0;
+}
 .title--left {
   max-width: 77.5%;
   text-align: left;
@@ -1585,6 +1594,9 @@ input[type=number] {
 .information__img {
   margin-bottom: 1.4rem;
 }
+.information__img img {
+  border-radius: 1rem 1rem 0 0;
+}
 .information__description {
   height: 22rem;
   overflow-y: auto;
@@ -1638,4 +1650,25 @@ input[type=number] {
     padding: 3rem 4rem;
     text-align: center;
   }
+}
+.reviews {
+  position: relative;
+  padding-top: 6.2rem;
+  padding-bottom: 7.5rem;
+  background: linear-gradient(180deg, #F4F4F4 0, #E9E9E9 100%);
+}
+.reviews .title {
+  margin-bottom: 3.2rem;
+}
+.reviews__slider {
+  position: relative;
+  padding: 1.4rem 1.1rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0.3;
+}
+.reviews__slider.swiper-slider-active {
+  opacity: 1;
 }

@@ -41,6 +41,8 @@ window.addEventListener('DOMContentLoaded', () => {
         },
       });
 
+// Swiper Brands
+
       const swiperBrands = new Swiper('.brands__slider', {
         loop: true,
         spaceBetween: 30,
@@ -57,7 +59,8 @@ window.addEventListener('DOMContentLoaded', () => {
           prevEl: '.brands__arrow-prev',
         },
       });
-});
+
+// Video
 
 if (document.querySelector('.preview__play')) {
   const playVideo = document.querySelector('.preview__play');
@@ -78,7 +81,28 @@ if (document.querySelector('.preview__play')) {
     videoBg.style.zIndex = '0';
     videoWrap.style.minHeight = '50rem';
   } )
+  
+  // доработать на классы
 
-  //*! доработать на классы
+  }
 
-}
+// Swiper Reviews
+
+  const swiperReviews = new Swiper('.reviews__slider', {
+    spaceBetween: 30,
+    loop: true,
+    centeredSlides: true,
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 3
+      }
+    }
+  });
+
+
+
+
+});

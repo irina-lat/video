@@ -1,0 +1,19 @@
+.reviews {
+    position: relative;
+    padding-top: 6.2rem;
+    padding-bottom: 7.5rem;
+    background: linear-gradient(180deg, #F4F4F4 0, #E9E9E9 100%);
+    .title {
+        margin-bottom: 3.2rem;
+    }
+    &__slider {
+        position: relative;
+        padding: 1.4rem 1.1rem 3rem;
+        @include centered;
+        flex-direction: column;
+        opacity: .3;
+        &.swiper-slider-active {
+            opacity: 1;
+        }
+    }
+}
