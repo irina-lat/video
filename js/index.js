@@ -102,6 +102,22 @@ if (document.querySelector('.preview__play')) {
     }
   });
 
+  const swiperRev = new Swiper('.rev__slider', {
+    spaceBetween: 30,
+    loop: true,
+    centeredSlides: true,
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 3
+      }
+    }
+    
+  });
+
+
 
 
 

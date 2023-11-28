@@ -6,14 +6,36 @@
     .title {
         margin-bottom: 3.2rem;
     }
-    &__slider {
+    &__slide {
         position: relative;
         padding: 1.4rem 1.1rem 3rem;
         @include centered;
         flex-direction: column;
         opacity: .3;
-        &.swiper-slider-active {
+        &.swiper-slide-active {
             opacity: 1;
         }
     }
+
+    &__avatar {
+        img {
+            width: 7.7rem;
+            height: 7.7rem;
+        }
+    }
+    &__title {
+        @include font(700, 1.8rem, 133%);
+    }
+
+    .rev {
+        &__slide {
+            width: 20rem;
+            height: 20rem;
+            background: green;
+            &.swiper-slide-active {
+                background: red;
+            }
+        }
+    }
 }
+

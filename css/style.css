@@ -1660,7 +1660,7 @@ input[type=number] {
 .reviews .title {
   margin-bottom: 3.2rem;
 }
-.reviews__slider {
+.reviews__slide {
   position: relative;
   padding: 1.4rem 1.1rem 3rem;
   display: flex;
@@ -1669,6 +1669,23 @@ input[type=number] {
   flex-direction: column;
   opacity: 0.3;
 }
-.reviews__slider.swiper-slider-active {
+.reviews__slide.swiper-slide-active {
   opacity: 1;
+}
+.reviews__avatar img {
+  width: 7.7rem;
+  height: 7.7rem;
+}
+.reviews__title {
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 133%;
+}
+.reviews .rev__slide {
+  width: 20rem;
+  height: 20rem;
+  background: green;
+}
+.reviews .rev__slide.swiper-slide-active {
+  background: red;
 }
