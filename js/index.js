@@ -33,6 +33,7 @@ window.addEventListener('DOMContentLoaded', () => {
       
         pagination: {
           el: '.hero__pagination',
+          clickable: true,
         },
       
         navigation: {
@@ -113,6 +114,14 @@ if (document.querySelector('.preview__play')) {
       768: {
         slidesPerView: 3
       }
+    },
+    navigation: {
+      nextEl: '.reviews__arrow-next',
+      prevEl: '.reviews__arrow-prev',
+    },
+    pagination: {
+      el: '.reviews__pagination',
+      clickable: true,
     }
     
   });

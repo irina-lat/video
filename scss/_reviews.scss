@@ -16,25 +16,52 @@
             opacity: 1;
         }
     }
-
+    &__data {
+        position: absolute;
+        top: 1.4rem;
+        right: 1.1rem;
+        @include font(400, 1.4rem, 150%);
+    }
     &__avatar {
+        margin-bottom: 1.2rem;
         img {
             width: 7.7rem;
             height: 7.7rem;
         }
     }
     &__title {
+        margin-bottom: 1.5rem;
         @include font(700, 1.8rem, 133%);
     }
-
-    .rev {
-        &__slide {
-            width: 20rem;
-            height: 20rem;
-            background: green;
-            &.swiper-slide-active {
-                background: red;
-            }
+    &__text {
+        @include font(400, 1.8rem, 133%);
+        text-align: center;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    &__slider {
+        .slider__arrow-prev {
+            left: 40rem;
+        }
+        .slider__arrow-next {
+            right: 40rem;
+        }
+    }
+    .reviews__pagination {
+        &.swiper-pagination-horizontal {
+            bottom: 5rem;
+        }
+        .swiper-pagination-bullet {
+            width: 2.2rem;
+            height: 0.5rem;
+            border-radius: 0%;
+        }
+        .swiper-pagination-bullet-active {
+            width: 7rem;
+            background: #DA3939;
+        }
+        &.swiper-pagination-horizontal {
+            bottom: 3.9rem;
         }
     }
 }
