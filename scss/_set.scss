@@ -32,9 +32,13 @@ body {
     background-color: #fff; //
 }
 
+.noscroll {
+    overflow: hidden !important;
+    height: 100% !important;
+}
+
 input,
 textarea {
-    -webkit-animation: bugfix infinite 1s;
     line-height: inherit;
     margin: 0;
     padding: 0;
@@ -94,6 +98,7 @@ img {
 }
 
 button {
+    cursor: pointer;
     border: none;
     color: inherit;
     font: inherit;
@@ -122,6 +127,20 @@ ul li {
     background: #fff;
     box-shadow: 0 .4rem 1.2rem rgba(0, 0, 0, 0.09);
     border-radius: 1rem;
+}
+
+.active-accordion {
+    .question-question {
+        background-color: #CF3535;
+        color: #fff;
+        border-radius: 1rem;
+            .question__plus {
+                display: none;
+            }
+            .question__minus {
+                display: flex;
+            }
+    }
 }
 
 input[type="number"]::-webkit-inner-spin-button,

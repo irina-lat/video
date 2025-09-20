@@ -100,20 +100,6 @@ if (document.querySelector('.preview__play')) {
       768: {
         slidesPerView: 3
       }
-    }
-  });
-
-  const swiperRev = new Swiper('.rev__slider', {
-    spaceBetween: 30,
-    loop: true,
-    centeredSlides: true,
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-      },
-      768: {
-        slidesPerView: 3
-      }
     },
     navigation: {
       nextEl: '.reviews__arrow-next',
@@ -123,10 +109,156 @@ if (document.querySelector('.preview__play')) {
       el: '.reviews__pagination',
       clickable: true,
     }
+    })
+
+// Swiper Example
+    const swiperExample = new Swiper('.example__slider', {
+    spaceBetween: 30,
+    loop: true,
+    breakpoints: {
+      320: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 4
+      }
+    },
+        navigation: {
+      nextEl: '.example__arrow-next',
+      prevEl: '.example__arrow-prev',
+    },   
+    })
+
+    if(document.querySelector('.question__item')) {
+      let accordion = document.querySelector('.question__accordion');
+      let tab = accordion.querySelectorAll('.question__item');
+      let answer = accordion.querySelectorAll('.question__answer');
+
+      accordion.addEventListener('click', (e) => {
+        const target = e.target.closest('.question__item');
+        if (target) {
+          tab.forEach((item, i) => {
+            if(item === target) {
+              answer[i].classList.add('active')
+              tab[i].classList.add('active-accordion')
+            } else {
+              answer[i].classList.remove('active')
+              tab[i].classList.remove('active-accordion')
+            }
+          })
+        }
+      })
+    }
+// Modal
+//     if(document.querySelector('.button-outline')) {
+//     const buttonsOpenModal = document.querySelectorAll('.button-outline'),
+//         body = document.querySelector('body'),
+//         modalOverlay = document.querySelector('.modal__overlay'),
+//         modalThanks = document.querySelector('.modal__thanks'),
+//         modalCheck = document.querySelector('.modal__check'),
+//         modalCloseThanks = document.querySelector('#close-thanks'),
+//         modalCloseCheck = document.querySelector('#close-check'), 
+//         modalThanksOpen = document.querySelector('.modal__form-button');
+
+//     buttonsOpenModal.forEach(item => {
+//         item.addEventListener('click', (e) => {
+//             e.preventDefault();
+//             modalOverlay.classList.add('modal__active');
+//             modalCheck.classList.add('modal__active');
+//             body.classList.add('noscroll');
+//         });
+//     });
     
-  });
+//     if (modalCloseCheck) { 
+//         modalCloseCheck.addEventListener('click', () => {
+//             modalOverlay.classList.remove('modal__active');
+//             modalCheck.classList.remove('modal__active');
+//             body.classList.remove('noscroll');     
+//         });
+//     }
 
+//     modalOverlay.addEventListener('click', (e) => {
+//         if (e.target === modalOverlay) {
+//             modalOverlay.classList.remove('modal__active');
+//             modalCheck.classList.remove('modal__active');
+//             modalThanks.classList.remove('modal__active');
+//             body.classList.remove('noscroll');
+//         }
+//     });
 
+//     modalThanksOpen.addEventListener('click', () => {
+//             modalOverlay.classList.add('modal__active');
+//             modalThanks.classList.add('modal__active');
+//             modalCheck.classList.remove('modal__active');
+//     })
+
+//     modalCloseThanks.addEventListener('click', () => {
+//             modalOverlay.classList.remove('modal__active');
+//             modalThanks.classList.remove('modal__active');
+//             body.classList.remove('noscroll');
+//     })
+// }
+
+// Modal
+if(document.querySelector('.button-outline')) {
+    const buttonsOpenModal = document.querySelectorAll('.button-outline'),
+        body = document.querySelector('body'),
+        modalOverlay = document.querySelector('.modal__overlay'),
+        modalThanks = document.querySelector('.modal__thanks'),
+        modalCheck = document.querySelector('.modal__check'),
+        modalCloseThanks = document.querySelector('#close-thanks'),
+        modalCloseCheck = document.querySelector('#close-check'), 
+        modalThanksOpen = document.querySelector('.modal__form-button');
+
+    // Открытие модального окна
+    buttonsOpenModal.forEach(item => {
+        item.addEventListener('click', (e) => {
+            e.preventDefault();
+            openModal(modalCheck);
+        });
+    });
+
+    // Делегирование событий на overlay
+    modalOverlay.addEventListener('click', (e) => {
+        // Закрытие по клику на фон
+        if (e.target === modalOverlay) {
+            closeAllModals();
+        }
+        
+        // Закрытие по клику на кнопки закрытия
+        if (e.target.closest('#close-check') || e.target.closest('#close-thanks')) {
+            closeAllModals();
+        }
+        
+        // Открытие окна благодарности при клике на кнопку отправки
+        if (e.target.closest('.modal__form-button')) {
+            e.preventDefault();
+            openModal(modalThanks);
+            modalCheck.classList.remove('modal__active');
+        }
+    });
+
+    // Закрытие по ESC
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeAllModals();
+        }
+    });
+
+    // Функции для работы с модальными окнами
+    function openModal(modal) {
+        modalOverlay.classList.add('modal__active');
+        modal.classList.add('modal__active');
+        body.classList.add('noscroll');
+    }
+
+    function closeAllModals() {
+        modalOverlay.classList.remove('modal__active');
+        modalCheck.classList.remove('modal__active');
+        modalThanks.classList.remove('modal__active');
+        body.classList.remove('noscroll');
+    }
+}
 
 
 

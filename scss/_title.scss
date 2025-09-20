@@ -60,6 +60,15 @@
             @include borderBot(22.4rem);
             right: 0;
         }
+        &-services::after {
+            @include borderBot(28.7rem);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        &-question::after {
+            @include borderBot(38.3rem);
+            right: 0;
+        }
     }
     &--left {
         max-width: 77.5%;
@@ -120,6 +129,13 @@
                 width: 30rem;
                 left: 13rem;   
             }
+            &-reviews::after {
+                width: 18rem; 
+            }
+            &-question::after {
+                width: 20rem; 
+                left: 18rem;  
+            }
         }
         &--left {
             max-width: 100%;
@@ -136,5 +152,6 @@
                 margin-bottom: 4.5rem;
             }
         }
+        
     }
 }

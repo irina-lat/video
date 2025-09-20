@@ -31,3 +31,22 @@
         @include font(400, 1.4rem, 150%);
     }
 }
+
+@media (max-width: 48em) {
+    .example {
+        .container {
+            padding: 0 1rem;
+        }
+        &__bg {
+            top: -8.5rem;
+            left: -4rem;
+        }
+        &__title {
+            margin-bottom: 2rem;
+            font-size: 2.8rem;
+        }
+        &__text {
+           font-size: 1.8rem;
+        }
+    }
+}

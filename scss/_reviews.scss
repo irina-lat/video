@@ -34,7 +34,7 @@
         @include font(700, 1.8rem, 133%);
     }
     &__text {
-        @include font(400, 1.8rem, 133%);
+        @include font(400, 1.4rem, 133%);
         text-align: center;
         padding-left: 1rem;
         padding-right: 1rem;
@@ -60,9 +60,34 @@
             width: 7rem;
             background: #DA3939;
         }
-        &.swiper-pagination-horizontal {
-            bottom: 3.9rem;
-        }
     }
 }
 
+@media (max-width: 48em) {
+    .reviews {
+        &__slider {
+            .slider__arrow-prev,
+            .slider__arrow-next {
+                display: none;
+            }
+        }
+        &__data {
+            font-size:  2.8rem;;
+        }
+        &__avatar {
+            margin-bottom: 4rem;
+            img {
+                width: 16rem;
+                height: 16rem;
+            }
+        }
+        &__title {
+            font-size:  3.6rem;;
+        }
+        &__text {
+            font-size:  2.8rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+    }
+}
