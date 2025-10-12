@@ -9,10 +9,9 @@
     }
     &__bg {
         position: absolute;
+        height: 40rem;
         width: 100%;
-        top: -3.5rem;
-        left: 0;
-        right: 0;
+        top: -8rem;
         z-index: 0;  
     }
     &__items {

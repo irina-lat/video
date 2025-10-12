@@ -1,15 +1,15 @@
 .video {
     position: relative;
     padding-top: 7.2rem;
-    padding-bottom: 9.8rem;
+    padding-bottom: 5.3rem;
     border-bottom: .7rem solid #CF3535;
     &__bg {
         position: absolute;
-        // top: 20rem;
+        top: 20rem;
         top: 0;
         left: 0;
         right: 0;
-        // bottom: -4rem;
+        bottom: -4rem;
         z-index: -1;
     }
     &__text {

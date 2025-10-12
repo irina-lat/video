@@ -3,15 +3,23 @@
     background: #333;
     padding-top: 7.7rem;
     padding-bottom: 7.3rem;
-    // margin-top: 7.7rem;
-    // margin-bottom: 7.3rem;
     &__bg {
-        width: 100%;
-        position: absolute;
-        top: -5rem;
-        left: 50%;
-        transform: translate(-50%, 0);
-        z-index: 0;
+        img {
+                &:nth-child(1) {
+                height: 30rem;
+                position: absolute;
+                top: -4.6rem;
+                left: 20%;
+                transform: translate(-50%, 0);
+                z-index: 0;
+                }
+                &:nth-child(2) {
+                    position: absolute;
+                    height: 32rem;
+                    top: -1rem;
+                    left: -5rem;
+                }
+            }
     }
     .container {
         position: relative;

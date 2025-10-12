@@ -111,6 +111,7 @@ if (document.querySelector('.preview__play')) {
     }
     })
 
+
 // Swiper Example
     const swiperExample = new Swiper('.example__slider', {
     spaceBetween: 30,

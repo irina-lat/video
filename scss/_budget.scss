@@ -5,11 +5,23 @@
     padding-top: 6rem;
     padding-bottom: 9rem;
     &__bg {
-        position: absolute;
-        top: -5rem;
-        left: 0;
-        right: 0;
-        z-index: 0;
+        img {
+
+            &:nth-child(1) {
+                position: absolute;
+                height: 30.7rem;
+                top: -2rem;
+                left: 15%;
+                transform: translate(-50%, 0);
+                z-index: 0;
+            }
+            &:nth-child(2) {
+                position: absolute;
+                height: 34rem;
+                top: -4rem;
+                right: -15%;
+            }
+        }
     }
     .container {
         position: relative;
